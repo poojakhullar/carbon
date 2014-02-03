@@ -3,14 +3,80 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Processing</title>
+
+<style>
+div.background
+  {
+  width:1077px;
+  height:615px;
+  background:url('http://upload.wikimedia.org/wikipedia/commons/a/a7/Pistachios_in_shells.jpg') no-repeat;
+  background-size:1077px 615px;
+  border:2px solid black;
+  }
+  div.transbox
+  {
+  width:407px;
+  height:616px;
+  margin:-2px -2px;
+  background-color:#ffffff;
+  border:1px solid black;
+  opacity:0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+  }
+ div.transbox p
+ {
+  margin:30px 40px;
+  font-weight:bold;
+  color:#000000;
+ }
+ div.left
+{
+position:absolute;
+left:156px;
+top:400px;
+width:50%;
+} 
+div.text
+{
+position:absolute;
+left:41px;
+top:109px;
+width:50%;
+} 
+</style>
 </head>
-<body style="background-repeat: no-repeat; background-image:url('http://upload.wikimedia.org/wikipedia/commons/f/f1/Pistachio_macro_whitebackground_NS.jpg')">
-<h1 style ="color:hotpink">Processing</h1>
+<body>
+<div class="background">
+<div class="transbox">
+
 <form action="./ControllerForm2" method="get">
 
-<label for="Train">Train</label>
-<select name="Train">
+<div class="text">
+<h1 style ="color:hotpink">Production</h1>
+<label for="Prune:Hand">Prune:Hand</label>
+<select name="Prune:Hand">
+<option value="0"selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+<br>
 
+<label for="Prune:Mechanic">Prune:Mechanic</label>
+<select name="Prune:Mechanic">
+<option value="0"selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+<br>
+
+<label for="Brush:Stack">Brush:Stack</label>
+<select name="Brush:Stack">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -19,8 +85,8 @@
 </select>
 <br>
 
-<label for="Prune">Prune</label>
-<select name="Prune">
+<label for="Winter:Sanitation:Pole">Winter:Sanitation:Pole</label>
+<select name="Winter:Sanitation:Pole">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -29,8 +95,8 @@
 </select>
 <br>
 
-<label for="Disk Prunning">Disk Prunning</label>
-<select name="Disk Prunning">
+<label for="Winter Sanitation:Rake">Copper defoliation</label>
+<select name="Winter:Saniation">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -39,8 +105,8 @@
 </select>
 <br>
 
-<label for="Boron emitters">Boron Emitters</label>
-<select name="Boron Emitters">
+<label for="Winter:Sanitation:Blow">Winter:Sanitation:Blow</label>
+<select name="Winter:Sanitation:Blow">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -49,8 +115,8 @@
 </select>
 <br>
 
-<label for="copper defoliation">Copper defoliation</label>
-<select name="Copper Defoliation">
+<label for="Chop">Chop</label>
+<select name="Chop">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -59,8 +125,8 @@
 </select>
 <br>
 
-<label for="Nitrogen">Nitrogen</label>
-<select name="Nitrogen">
+<label for="Disc Mummies">Disc Mummies</label>
+<select name="Disc Mummies">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -69,8 +135,8 @@
 </select>
 <br>
 
-<label for="Foliar Spraying">Foliar Spraying</label>
-<select name="Foliar Spraying">
+<label for="Shredded Prunnings">Shredded Prunnings</label>
+<select name="Shredded Prunnings">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -79,8 +145,8 @@
 </select>
 <br>
 
-<label for="Weed">Weed</label>
-<select name="Weed">
+<label for="Bot/Alternaria">Bot/Alternaria</label>
+<select name="Bot/Alternaria">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -89,8 +155,8 @@
 </select>
 <br>
 
-<label for="Herbicide Applications">Herbicide Applications</label>
-<select name="Herbicide Applications">
+<label for="Bot/Botrytis">Bot/Botrytis</label>
+<select name="Bot/Botrytis">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -99,8 +165,8 @@
 </select>
 <br>
 
-<label for="Plant bugs">Plant bugs</label>
-<select name="Plant bugs">
+<label for="Disease Applications">Disease Application</label>
+<select name="Disease Applications">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -109,8 +175,8 @@
 </select>
 <br>
 
-<label for="Remove Stakes">Remove Stakes</label>
-<select name="Remove Stakes">
+<label for="Fertilize:N">Fertilize:N</label>
+<select name="Fertilize:N">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -119,8 +185,8 @@
 </select>
 <br>
 
-<label for="Water Pumped">Water Pumped</label>
-<select name="Water Pumped">
+<label for="Fertilize:Zn">Fertilize:Zn</label>
+<select name="Fertilize">
 <option value="1"selected>1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -128,17 +194,10 @@
 <option value="5">5</option>
 </select>
 <br>
+<div class="left">
+<input type="image"  value="submit" src="C:\Users\eaguaronfuente\Desktop\next.png" alt="submit Button" onMouseOut="this.src='next.png'" onMouseOver="this.src='next.png'">
 
-<label for="Irrigate">Irrigate</label>
-<select name="Irrigate">
-<option value="1"selected>1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-</select>
-<br>
-<input type="submit" name="Next" value="Next"/>
+
 </form>
 
 </body>

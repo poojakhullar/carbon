@@ -3,16 +3,64 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Harvesting</title>
+<style>
+div.background
+  {
+  width:1077px;
+  height:615px;
+  background:url('http://westernfarmpress.com/site-files/westernfarmpress.com/files/imagecache/large_img/uploads/2013/03/pistachios-trees.jpg') no-repeat;
+  background-size:1077px 615px;
+  border:2px solid black;
+  }
+  div.transbox
+  {
+  width:407px;
+  height:616px;
+  margin:-2px -2px;
+  background-color:#ffffff;
+  border:1px solid black;
+  opacity:0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+  }
+ div.transbox p
+ {
+  margin:30px 40px;
+  font-weight:bold;
+  color:#000000;
+ }
+ div.left
+{
+position:absolute;
+left:156px;
+top:400px;
+width:50%;
+} 
+div.text
+{
+position:absolute;
+left:41px;
+top:109px;
+width:50%;
+} 
+
+</style>
+
+
 </head>
-<body style="background-repeat: no-repeat; background-image:url('http://upload.wikimedia.org/wikipedia/commons/f/f1/Pistachio_macro_whitebackground_NS.jpg')">
-<!--  <img src = "http://americanpistachios.org/sites/default/files/Nut-pile-980x373.jpg">-->
-<h1 style ="color:hotpink">Harvesting</h1>
+<body>
+<div class="background">
+<div class="transbox">
+
+
 <form action="./ControllerForm1" method="get">
+<div class="text">
+
+<h1 style ="color:hotpink"><strong>Orchard Establishment</strong></h1>
 
 <label for="Land Prep">Land Prep</label>
 <select name="Land Prep">
-
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -22,7 +70,8 @@
 
 <label for="Land Prep:Stubble Disc 1X">Land Prep:Stubble Disc 1X</label>
 <select name="Land Prep:Stubble Disc 1X">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -32,7 +81,8 @@
 
 <label for="Land Prep:Disc & Float 2X">Land Prep:DiscFloat 2X</label>
 <select name="Land Prep:Disc & Float 2X">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -42,7 +92,8 @@
 
 <label for="Trees:135 Per Acre">Trees:135 Per Acre</label>
 <select name="Trees:135 Per Acre">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -52,7 +103,8 @@
 
 <label for="Plant:Survey">Plant:Survey</label>
 <select name="Plant:Survey">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -62,7 +114,8 @@
 
 <label for="Plant:Mark">Plant:Mark</label>
 <select name="Plant:Mark">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -72,7 +125,8 @@
 
 <label for="Plant:Plant Trees">Plant:Plant Trees</label>
 <select name="Plant:Plant Trees">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -82,7 +136,8 @@
 
 <label for="Plant:Spread Stakes">Plant:Spread Stakes</label>
 <select name="Plant:Spread Stakes">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -92,7 +147,8 @@
 
 <label for="Plant:Stake Trees">Plant:Stake Trees</label>
 <select name="Plant:Stake Trees">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -102,7 +158,8 @@
 
 <label for="Bud:Field Bud Trees">Bud:Field Bud Trees</label>
 <select name="Bud:Field Bud Trees">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -113,7 +170,8 @@
 
 <label for="Train:Notch & Tip Root Stock">Train:NotchTip Root Stock</label>
 <select name="Train:Notch & Tip Root Stock">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
@@ -123,14 +181,82 @@
 
 <label for="Drip Irrigation System & Hoses">Drip Irrigation SystemHoses</label>
 <select name="Drip Irrigation System & Hoses">
-<option value="1"selected>1</option>
+<option value="0"selected>0</option>
+<option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
 <option value="5">5</option>
 </select>
 <br>
-<input type="submit" name="Next" value="Next"/>
+<label for="Train/Sucker">Train/Sucker</label>
+<select name="Train Sucker">
+<option value="0"selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+<br>
+
+<label for="Prune:Dormant">Prune:Dormant</label>
+<select name="Prune:Dormant">
+<option value="0"selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+<br>
+
+<label for="Prune:Disk Prunning">Prune:Disk Prunning</label>
+<select name="Prune:Disk Prunning">
+<option value="0"selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+<br>
+
+<label for="Shred Prunning">Shred Prunning</label>
+<select name="Shred Prunning">
+<option value="0"selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+<br>
+
+<label for="Fertilize:Boron under Emitters">Fertilize under Emitters</label>
+<select name="Fertilize:Boron under Emitters">
+<option value="0"selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+<br>
+
+
+
+
+
+
+
+
+
+
+<div class="left">
+<input type="image"  value="submit" src="C:\Users\pooja1\Desktop\next.png" alt="submit Button" onMouseOut="this.src='next.png'" onMouseOver="this.src='next.png'">
+
+
 </form>
 
 
